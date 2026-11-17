@@ -12,9 +12,28 @@
 <style>
 body{margin:0;background:#FAF7F1}
 a{color:#6E5A2F}a:hover{color:#3D3220}
+img{max-width:100%}
+/* Tablets: 4-across rows become 2-across */
+@media (max-width: 1024px){
+  [style*="grid-template-columns: repeat(4"]{grid-template-columns:repeat(2, minmax(0, 1fr)) !important}
+}
+/* Phones */
 @media (max-width: 760px){
   [style*="grid-template-columns: repeat(4"],[style*="grid-template-columns: repeat(3"],[style*="grid-template-columns: repeat(2"]{grid-template-columns:1fr !important}
-  h1{font-size:36px !important}
+  section[aria-label="Credentials"] > div{grid-template-columns:repeat(2, minmax(0, 1fr)) !important;gap:20px 16px !important}
+  h1{font-size:34px !important}
+  h2{font-size:28px !important}
+  /* less empty space above and below each section */
+  section[style*="padding: 88px"], section > div[style*="padding: 88px"]{padding-top:56px !important;padding-bottom:56px !important}
+  section[style*="gap: 56px"]{gap:32px !important}
+  /* shorter images so text isn't pushed far down */
+  figure > div[style*="height: 440px"]{height:280px !important}
+  article > div[style*="height: 280px"]{height:220px !important}
+  /* tighter header and menu */
+  header img{height:44px !important;margin:12px 0 !important}
+  nav[aria-label="Main"]{gap:6px 18px !important;font-size:14px !important}
+  /* testimonial quote */
+  section[style*="background: #26231F"] p[style*="font-size: 26px"]{font-size:21px !important}
 }
 </style>
 </head>
@@ -47,7 +66,7 @@ a{color:#6E5A2F}a:hover{color:#3D3220}
 </div>
 </div>
 <figure style="flex: 1 1 420px; min-width: 0; margin: 0">
-<div style="position: relative; height: 440px; border: 2px dashed #B79A63; border-radius: 6px; background: #F1EADC; display: flex; flex-direction: column; justify-content: center; gap: 12px; padding: 32px; box-sizing: border-box"><img src="images/hero.jpg" alt="Warm" onload="this.parentNode.style.borderStyle='none'" onerror="this.remove()" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: inherit; display: block">
+<div style="position: relative; height: 440px; border: 2px dashed #B79A63; border-radius: 6px; background: #F1EADC; display: flex; flex-direction: column; justify-content: center; gap: 12px; padding: 32px; box-sizing: border-box"><img src="images/hero.jpg" alt="Adult learner working at a laptop on a video tutoring call in a calm home office" onload="this.parentNode.style.borderStyle='none'" onerror="this.remove()" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: inherit; display: block">
 <p style="margin: 0; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: #6E5A2F">AI image placeholder</p>
 <p style="margin: 0; font-family: Lora, Georgia, serif; font-size: 20px; line-height: 1.4">“Warm, natural-light photo of an adult learner in their 40s working at a laptop on a video tutoring call, notebook and coffee on a wooden table, calm home office, soft cream and gold tones, editorial style.”</p>
 </div>
@@ -81,7 +100,7 @@ a{color:#6E5A2F}a:hover{color:#3D3220}
 <a href="services.html" style="margin-top: auto; font-weight: 500; font-size: 15px">Developmental editing</a>
 </div>
 <div style="background: #FFFFFF; border: 1px solid #E7DFD0; border-radius: 6px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
-<div style="position: relative; margin: -28px -28px 8px; height: 170px; border-bottom: 2px dashed #B79A63; background: #F1EADC; display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: 20px; box-sizing: border-box; border-radius: 6px 6px 0 0"><img src="images/card-organizations.jpg" alt="Small team gathered around a laptop in a bright" onload="this.parentNode.style.borderStyle='none'" onerror="this.remove()" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: inherit; display: block"><p style="margin: 0; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: #6E5A2F">AI image placeholder</p><p style="margin: 0; font-family: Lora, Georgia, serif; font-size: 14px; line-height: 1.4">“Small team gathered around a laptop in a bright, modern office, candid and friendly.”</p></div>
+<div style="position: relative; margin: -28px -28px 8px; height: 170px; border-bottom: 2px dashed #B79A63; background: #F1EADC; display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: 20px; box-sizing: border-box; border-radius: 6px 6px 0 0"><img src="images/card-organizations.jpg" alt="Small team gathered around a laptop in a bright, modern office" onload="this.parentNode.style.borderStyle='none'" onerror="this.remove()" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: inherit; display: block"><p style="margin: 0; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: #6E5A2F">AI image placeholder</p><p style="margin: 0; font-family: Lora, Georgia, serif; font-size: 14px; line-height: 1.4">“Small team gathered around a laptop in a bright, modern office, candid and friendly.”</p></div>
 <h3 style="margin: 0; font-family: Lora, Georgia, serif; font-weight: 500; font-size: 22px">Organizations</h3>
 <p style="margin: 0; font-size: 16px; color: #4A4540">Scope of Work, pitch materials, and training documentation.</p>
 <a href="services.html" style="margin-top: auto; font-weight: 500; font-size: 15px">Training and scope</a>
