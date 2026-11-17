@@ -12,9 +12,25 @@
 <style>
 body{margin:0;background:#FAF7F1}
 a{color:#6E5A2F}a:hover{color:#3D3220}
+img{max-width:100%}
+/* Tablets: 4-across rows become 2-across */
+@media (max-width: 1024px){
+  [style*="grid-template-columns: repeat(4"]{grid-template-columns:repeat(2, minmax(0, 1fr)) !important}
+}
+/* Phones */
 @media (max-width: 760px){
   [style*="grid-template-columns: repeat(4"],[style*="grid-template-columns: repeat(3"],[style*="grid-template-columns: repeat(2"]{grid-template-columns:1fr !important}
-  h1{font-size:36px !important}
+  h1{font-size:34px !important}
+  h2{font-size:24px !important}
+  /* less empty space above and below each section */
+  section[style*="padding: 88px"]{padding-top:56px !important;padding-bottom:40px !important}
+  section > div[style*="padding: 72px"], section[style*="padding: 80px"]{padding-top:48px !important;padding-bottom:48px !important}
+  section[style*="padding: 0 24px 64px"]{padding-bottom:40px !important}
+  /* shorter banner photo */
+  figure > div[style*="height: 340px"]{height:200px !important}
+  /* tighter header and menu */
+  header img{height:44px !important;margin:12px 0 !important}
+  nav[aria-label="Main"]{gap:6px 18px !important;font-size:14px !important}
 }
 </style>
 </head>
@@ -49,7 +65,7 @@ a{color:#6E5A2F}a:hover{color:#3D3220}
 
 <section style="max-width: 1200px; margin: 0 auto; padding: 0 24px 64px">
 <figure style="margin: 0">
-<div style="position: relative; height: 340px; border: 2px dashed #B79A63; border-radius: 6px; background: #F1EADC; display: flex; flex-direction: column; justify-content: center; gap: 10px; padding: 32px; box-sizing: border-box"><img src="images/hiring-banner.jpg" alt="Wide shot of a calm" onload="this.parentNode.style.borderStyle='none'" onerror="this.remove()" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: inherit; display: block">
+<div style="position: relative; height: 340px; border: 2px dashed #B79A63; border-radius: 6px; background: #F1EADC; display: flex; flex-direction: column; justify-content: center; gap: 10px; padding: 32px; box-sizing: border-box"><img src="images/hiring-banner.jpg" alt="Calm, organized home office with a laptop on a video call and printed documents" onload="this.parentNode.style.borderStyle='none'" onerror="this.remove()" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: inherit; display: block">
 <p style="margin: 0; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; color: #6E5A2F">AI image placeholder · wide banner</p>
 <p style="margin: 0; font-family: Lora, Georgia, serif; font-size: 20px; line-height: 1.4; max-width: 760px">“Wide shot of a calm, organized home office: laptop on a video call, printed documents with tabbed sections, a coffee cup and reading glasses, soft daylight, cream and gold tones, no readable text.”</p>
 </div>
@@ -64,7 +80,7 @@ a{color:#6E5A2F}a:hover{color:#3D3220}
 <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 16px; color: #4A4540">
 <li>Substantial edits and redrafts across a book-length manuscript</li>
 <li>Consistent voice, tone, and structure from first chapter to last</li>
-<li>Final text revisions before publication</li>
+<li>Chapter-by-chapter revision through multiple drafts</li>
 </ul>
 </div>
 <div style="display: flex; flex-direction: column; gap: 14px; border-top: 2px solid #B79A63; padding-top: 20px">
