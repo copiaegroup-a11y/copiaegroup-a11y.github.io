@@ -12,9 +12,27 @@
 <style>
 body{margin:0;background:#FAF7F1}
 a{color:#6E5A2F}a:hover{color:#3D3220}
+img{max-width:100%}
+/* Tablets: 4-across rows become 2-across */
+@media (max-width: 1024px){
+  [style*="grid-template-columns: repeat(4"]{grid-template-columns:repeat(2, minmax(0, 1fr)) !important}
+}
+/* Phones */
 @media (max-width: 760px){
   [style*="grid-template-columns: repeat(4"],[style*="grid-template-columns: repeat(3"],[style*="grid-template-columns: repeat(2"]{grid-template-columns:1fr !important}
-  h1{font-size:36px !important}
+  h1{font-size:34px !important}
+  h2{font-size:27px !important}
+  /* less empty space above and below each section */
+  section[style*="padding: 88px"]{padding-top:56px !important}
+  section[style*="padding: 72px"], section > div[style*="padding: 72px"]{padding-top:48px !important;padding-bottom:48px !important}
+  section[style*="gap: 48px"], section > div[style*="gap: 48px"]{gap:28px !important}
+  /* every service shows heading and text first, then its photo */
+  section figure{order:2}
+  /* shorter photos */
+  figure > div[style*="height: 340px"], figure > div[style*="height: 380px"]{height:240px !important}
+  /* tighter header and menu */
+  header img{height:44px !important;margin:12px 0 !important}
+  nav[aria-label="Main"]{gap:6px 18px !important;font-size:14px !important}
 }
 </style>
 </head>
