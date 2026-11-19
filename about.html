@@ -27,6 +27,8 @@ img{max-width:100%}
   section[style*="padding: 80px"], section > div[style*="padding: 80px"]{padding-top:56px !important;padding-bottom:56px !important}
   section > div[style*="padding: 64px"]{padding-top:48px !important;padding-bottom:48px !important}
   section[style*="gap: 56px"], section[style*="gap: 48px"]{gap:32px !important}
+  /* smaller headshot on phones */
+  section figure{flex-basis:220px !important;width:220px !important}
   /* tighter header and menu */
   header img{height:44px !important;margin:12px 0 !important}
   nav[aria-label="Main"]{gap:6px 18px !important;font-size:14px !important}
@@ -52,8 +54,8 @@ img{max-width:100%}
 </header>
 
 <section style="max-width: 1200px; margin: 0 auto; padding: 88px 24px 64px; display: flex; flex-wrap: wrap; align-items: center; gap: 56px">
-<figure style="flex: 1 1 460px; min-width: 0; margin: 0">
-<div style="position: relative; aspect-ratio: 3 / 2; overflow: hidden; border: 2px dashed #B79A63; border-radius: 6px; background: #F1EADC; display: flex; flex-direction: column; justify-content: center; gap: 12px; padding: 32px; box-sizing: border-box"><img src="images/headshot.jpg" alt="Mary Ellen Lavoie" onload="this.parentNode.style.borderStyle='none'" onerror="this.remove()" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: inherit; display: block">
+<figure style="flex: 0 0 280px; width: 280px; max-width: 100%; margin: 0">
+<div style="position: relative; aspect-ratio: 4 / 5; overflow: hidden; border: 2px dashed #B79A63; border-radius: 6px; background: #F1EADC; display: flex; flex-direction: column; justify-content: center; gap: 12px; padding: 32px; box-sizing: border-box"><img src="images/headshot.jpg" alt="Mary Ellen Lavoie" onload="this.parentNode.style.borderStyle='none'" onerror="this.remove()" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 25%; border-radius: inherit; display: block">
 </div>
 </figure>
 <div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 20px">
